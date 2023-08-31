@@ -6,8 +6,8 @@ import (
 
 	"log"
 
-	"grpcmodel/constants"
-	pb "grpcmodel/customer"
+	"github.com/SinekaV/grpc-constants/constants"
+	pb "github.com/SinekaV/grpc-proto/customer"
 
 	"google.golang.org/grpc"
 )
@@ -23,7 +23,7 @@ func main() {
 	client := pb.NewCustomerServiceClient(conn)
 	
 	response, err := client.CreateCustomer(context.Background(), &pb.CustomerRequest{
-		CustomerId: 321,
+		CustomerId: 301,
 		Firstname:  "Sineka",
 		Lastname:   "V",
 		BankId:     12345,
