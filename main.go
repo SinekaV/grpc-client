@@ -23,7 +23,7 @@ func main() {
 	client := pb.NewCustomerServiceClient(conn)
 	
 	response, err := client.CreateCustomer(context.Background(), &pb.CustomerRequest{
-		CustomerId: 301,
+		CustomerId: 401,
 		Firstname:  "Sineka",
 		Lastname:   "V",
 		BankId:     12345,
